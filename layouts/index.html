@@ -4,9 +4,9 @@
 <hr>
 {{.Content}}
 <hr>
+{{ $svg := resources.Get "feather/icons/activity.svg" }}
 SVG:
-{{ $svg := resources.Get "assets/feather/icons/activity.svg" }}
-{{ $svg }}
+{{ $svg.Content | safeHTML }}
 <hr>
 Legam hic nescius eu duis, aute fabulas distinguantur. Velit cupidatat 
 do distinguantur. Quorum vidisse adipisicing do se mentitum 
