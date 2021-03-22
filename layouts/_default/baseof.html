@@ -12,6 +12,13 @@
         SVG:
         {{ $svg.Content | safeHTML }}
         <hr>
+            {{ $fa := resources.Get "FortAwesome/Font-Awesome/scss/font-awesome.scss" }}
+            fa: {{ $fa.Permalink }}
+        <hr>
+            {{ $twbs := resources.Get "twbs/icons/icons/alarm.svg" }}
+            twbs: {{ $twbs.Content | safeHTML }}
+        <hr>
+
         {{- block "main" . }}{{- end }}
         </div>
         {{- partial "footer.html" . -}}
